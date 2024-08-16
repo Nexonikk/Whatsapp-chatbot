@@ -11,7 +11,9 @@ app.get("/api", (req, res) => {
 });
 
 app.get("/api/webhook", (req, res) => {
-  return req.params.hub.challenge;
+  console.log("Webhook called");
+  console.log("req.params");
+  return "Hiiii";
 });
 
 // start the server
