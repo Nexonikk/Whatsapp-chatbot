@@ -13,7 +13,7 @@ app.get("/api", (req, res) => {
 app.get("/api/webhook", (req, res) => {
   console.log("Webhook called");
   console.log("req.params", req.query);
-  res.send(req.query.hub.challenge);
+  res.send(req.query["hub.challenge"]);
 });
 
 // start the server
