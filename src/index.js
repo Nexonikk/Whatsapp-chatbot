@@ -6,9 +6,14 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/api", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Welcome to the Real World!");
 });
+
+app.get("/api/webhook", (req, res) => {
+  return req.params.hub.challenge;
+});
+
 // start the server
 app.listen(3000, () => {
   console.log("Server started on port 3000");
