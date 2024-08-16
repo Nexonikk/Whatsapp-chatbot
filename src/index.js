@@ -12,7 +12,7 @@ app.get("/api", (req, res) => {
 
 app.get("/api/webhook", (req, res) => {
   console.log("Webhook called");
-  console.log("req.params");
+  console.log("req.params", req.params);
   res.send("Webhook called");
 });
 
