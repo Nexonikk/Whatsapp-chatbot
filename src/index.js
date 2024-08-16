@@ -13,7 +13,7 @@ app.get("/api", (req, res) => {
 app.get("/api/webhook", (req, res) => {
   console.log("Webhook called");
   console.log("req.params");
-  return "Hiiii";
+  res.send("Webhook called");
 });
 
 // start the server
